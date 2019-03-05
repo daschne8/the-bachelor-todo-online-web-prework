@@ -1,5 +1,6 @@
 def get_first_name_of_season_winner(data, season)
-  data.fetch(season).each do |contestant|
+  season_data = data.fetch(season)
+  season_data.each do |contestant|
     if contestant[:status] == "Winner"
       return contestant["name"]
     end
