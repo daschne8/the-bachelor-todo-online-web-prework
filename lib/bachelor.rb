@@ -1,5 +1,5 @@
 def get_first_name_of_season_winner(data, season)
-  data.fetch(season)[0].max_by(&:age).name.split[0]
+  data.fetch(season).max_by(:age).name.split[0]
 
 end
 
