@@ -1,7 +1,7 @@
 def get_first_name_of_season_winner(data, season)
   season_data = data.fetch(season)
   season_data[0].each do |contestant|
-    if contestant[:status] == "Winner"
+    if contestant["status"] == "Winner"
       return contestant["name"]
     end
   end
@@ -24,4 +24,4 @@ def get_average_age_for_season(data, season)
   # code here
 end
 
-puts 
+puts
